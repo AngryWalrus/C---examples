@@ -1,0 +1,89 @@
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
+#include<fstream>
+#include<string>
+
+using namespace std;
+
+
+void swapper(int& a, int& b) ;
+void sort(string a[],int size);
+//execution time = 0.077 s
+//bool swapneeded(string& a, string& b);
+//bool swapneeded(string a, string b);
+main(){
+
+//get the characters from the user and insert them into the array.
+string filename;
+
+//let the user make the name of the file
+cout<<"Enter a file name(with extension): "<<endl;
+cin>>filename;
+
+//this takes a string and returns it as an array of characters
+ifstream input(filename.c_str());
+
+//check to see if the file exists
+if (input.fail()){
+    cout<<filename<<" does not exist"<<endl;
+    return -1;
+    }
+
+int size = 1000;
+string arr[size];
+
+string text;
+
+//reads 1000 lines from the file.
+for(int i=0;i<size;i++){
+    getline(input,text);
+    arr[i] = text;
+
+    }
+
+//starts and stops the timer
+clock_t start_t=clock();
+sort(arr,1000);
+clock_t stop_t=clock();
+
+//prints the array
+for(int i=0;i<size;i++){
+    cout<<arr[i]<<endl;
+    }
+input.close();
+
+
+
+
+
+
+
+//prints the execution time
+cout<<"The execution time is " <<(float)(stop_t-start_t)/ CLOCKS_PER_SEC;
+}
+
+bool swapneeded(string a, string b) {
+    if (a<b){
+    string c;
+    c=a;
+    a=b;
+    b=c;
+    return true;
+        }
+
+else{
+    return false;}
+}
+
+//THIS SORTS THE VALUES IN THE ARRAY
+void sort(string a[],int size){
+    int j;
+     for (int j = 0; j < size; j++)
+     {
+        swapneeded(a[j], a[j+1]);
+
+     }
+
+}
+

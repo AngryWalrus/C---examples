@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1506530165 source:c:\users\matthew\desktop\new folder\lab02_a1.cpp\lab02_a1.cpp
+	<iostream>
+	<cmath>
+	<ctime>
+
+1446671344 source:c:\users\matthew\desktop\new folder\lab02_a1.cpp\main.cpp
+	<iostream>
+

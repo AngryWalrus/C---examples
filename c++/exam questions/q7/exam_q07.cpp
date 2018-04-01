@@ -1,0 +1,111 @@
+/*
+Matthew Lapres-Northey, 100653126, exam q6
+
+make a queue
+my queue does not function however i commented where posiible
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+
+struct Node {
+    int data;
+    Node *next;
+};
+
+class Queue {
+public:
+    Queue(); //constructor
+    ~Queue(); //destructor
+    void enqueue(int d); //enqueues node onto top of Queue
+    int dequeue(); //dequeues bottom node off of Queue -- returns integer dequeued
+    bool isEmpty(); //checks if Queue is empty
+    void print(); //print contents of Queue
+                         //from top to bottom
+
+private:
+    Node *top; //points to top node in Queue
+    Node *bottom; //points to the bottom node in the queue
+};
+
+Queue::Queue() {
+    top = NULL;
+}
+
+Queue::~Queue() {
+  while (!isEmpty())
+    dequeue();
+}
+
+void Queue::enqueue(int d) {
+
+    Node *temp = new Node;
+    temp->data = d;
+    temp->next = top;
+	top = temp;
+
+	//if there arent any nodes when this is run, the node which is entered is the bottom.
+	if (isEmpty()){
+        bottom-> data;
+    }
+
+}
+
+//remove the top element
+int Queue::dequeue() {
+    if (isEmpty()) {
+        cout << "ERROR: Can't dequeue from empty Queue"
+             << endl;
+        return -1; //error
+    }
+    else {
+      //PART A
+    }
+
+    return 0;  //comment out this line once you implement your function
+}
+
+
+bool Queue::isEmpty() {
+    return (top==NULL);
+}
+
+
+//Print Queue from top to bottom
+
+void Queue::print() {
+    //while list is not empty, print the current node
+    //then point to the next node until the next node is the bottom
+    if(!(isEmpty())){
+        cout<<top<<endl;
+        //point to next node
+        //repeat until empty
+    }
+    else
+        cout<<"EMPTY";
+
+  //PART B
+}
+
+
+int main(){
+    Queue *s = new Queue(); //don't need "new" for ordinary variables!
+    s->print();
+    s->enqueue(20);
+    s->enqueue(30);
+    s->print();
+    s->enqueue(40);
+    s->enqueue(12);
+    s->print();
+    s->dequeue();
+    s->print();
+    s->dequeue();
+    s->print();
+    s->dequeue();
+    delete s;
+
+    return 0;
+}

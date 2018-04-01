@@ -1,0 +1,29 @@
+#include<string>
+#include<iostream>
+
+using namespace std;
+
+string user_input;
+string arr[20];
+int num_codes = 0;
+
+int main(){
+
+
+
+    while (user_input!="DONE"){
+        cout<<"Enter a course code. Type \"DONE\" once you are finished"<<endl;
+        cin>>user_input;
+
+        if (user_input != "DONE"){
+            arr[num_codes] = user_input;
+            num_codes++;
+        }
+
+    }
+
+    //cout<<"bye";
+    for(int i =0;i<num_codes;i++){
+        cout<<arr[i]<<endl;
+    }
+}

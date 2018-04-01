@@ -1,0 +1,59 @@
+#include<string>
+#include<iostream>
+
+using namespace std;
+
+/*
+1.get string from user
+2.get string using writeString
+3.open the file
+4.write to the file
+5.check if user has Input Quit
+5a. if yes, close file.
+5b. if no, see step 1.
+6.close the file
+*/
+
+writeString(string userString)
+{
+//this is the name of the file
+string input = "user.txt";
+
+//open the file so it can be modified
+ofstream file.open(input);
+
+//writes the string to the file
+input>>userString>>endl;
+
+//checks if user_input was written to the file
+if(){
+    return true;
+}
+else
+    return false;
+
+//close the file
+ofstream input.close();
+}
+
+//gets a string from the user
+main(){
+
+    //this is an empty string
+    string user_input = "";
+
+    //prompts user for strings until they enter QUIT
+    while(user_input!="QUIT")
+    {
+        cout<<"Enter a word: "<<endl;
+        cin>>user_input;
+        writeString(user_input);
+    }
+
+    cout<<"over"<<endl;;
+
+
+
+}
+
+

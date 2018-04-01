@@ -1,0 +1,14 @@
+T PERM: L'U'(LUL) F'L2 (ULUL') U'LF
+E PERM: (L2U'LU) y' (L'U'LU)(L'U'LUL'U'L) y (L'U L2)
+F PERM: y' LUF (L'U'LUL) F'L2 (ULUL'U')(LU'L')
+G(a) PERM: L2U'(LU'LUL') UL2D' (ULU'L') u
+G(b) PERM: (LUL') y'L2u' (LU'L'UL') u L2
+G(c) PERM: L2 u (L'UL'U'L) u' L2 y' (L'UL)
+G(d) PERM: (L'U'LU) D'L2 (UL'UL)(U'LU'L2) u
+H PERM: (L2U2) L' (U2L2U2L2U2) L' (U2L2)
+Z PERM: (LUL'U) (L'U'L'U) (LU'L'U') L2UL
+V PERM: y2 (L'ULU') x (ULU2) (L'U') L (U'L'U2) (LUL'U') x'
+Y PERM: F'L'ULUL'U'LFL'U'LULF'L'F
+A(a) PERM: x (LU'L) D2 (L'UL) D2L2 x'
+A(b) PERM: x L2D2L'U'LD2L'UL'
+J(B) PERM: (L'U'L) F L' U' (LUL) F' L2(ULU)

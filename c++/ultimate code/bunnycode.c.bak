@@ -1,0 +1,20 @@
+//ultimate bunny code 1060U
+#include<iostream>
+#include<string>
+#include<fstring>
+
+using namespace std;
+
+//structs are public 
+struct bunny{
+    string color;
+    Bunny *next; //next bunny in linked list
+
+};
+class Bunnies{
+    private:
+        //first bunny
+
+};
+int main(){}
+

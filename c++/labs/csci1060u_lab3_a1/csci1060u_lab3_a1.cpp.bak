@@ -1,0 +1,68 @@
+#include<iostream>
+
+using namespace std;
+
+//variables
+int nums[5];
+int high;
+int low;
+int tmp;
+int mid = nums[(high+low)/2];
+
+/*void quickSort(int arr[], int left, int right){
+while (low <= high) {
+            while (nums[low] < mid)
+                  low++;
+            while (nums[low] > mid)
+                  high--;
+            if (low <= high) {
+                  tmp = nums[low];
+                  nums[low] = nums[high];
+                  nums[high] = tmp;
+                  low++;
+                  high--;
+            }
+
+}
+}*/
+
+void quickSort(int arr[], int left, int right) {
+      int i = left, j = right;
+      int tmp;
+      int pivot = arr[(left + right) / 2];
+
+      /* partition */
+      while (i <= j) {
+            while (arr[i] < pivot)
+                  i++;
+            while (arr[j] > pivot)
+                  j--;
+            if (i <= j) {
+                  tmp = arr[i];
+                  arr[i] = arr[j];
+                  arr[j] = tmp;
+                  i++;
+                  j--;
+            }
+      };
+
+      /* recursion */
+      if (left < j)
+            quickSort(arr, left, j);
+      if (i < right)
+            quickSort(arr, i, right);}
+main(){
+//get the numbers from the user and insert them into the array.
+cout<<"Enter five integers: "<<endl;
+for(int i=0;i<5;i++)
+{
+    cin>>nums[i];
+}
+quickSort(nums,nums[1],nums[5]);
+for(int i=0;i<5;i++)
+{
+    cout<<nums[i];
+}
+
+
+}
